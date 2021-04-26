@@ -12,37 +12,32 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./public/style.css" />
+    <link rel="stylesheet" href="./public/style1.css" />
   </head>
   <body>
     <header>
-      <h1>
-        ISQA_3 - Anon Message Board
+      <h1 style="text-align: center; padding-top: 20px;">
+        Anonymous Message Board
       </h1>
     </header>
-    <div>
-      <br /><br />
-      <h2>
-        <a href="/b/general/">Go to testing <i>'/b/general/'</i> board</a>
-      </h2>
-    </div>
-    <hr style="margin: 50px" />
-    <div id="testui" style="margin-left: 5%">
-      <h2 style="text-align: left">API Tests:</h2>
-      <h4>New thread (POST /api/threads/:board)</h4>
+        <hr style="margin: 10px" />
+    <div id="testui" style="text-align: center;">
+      <h2 style="text-align: center; padding-bottom: 15px;">API Tests:</h2>
+      <h3>New thread (POST /api/threads/:board)</h3>
       <form action="/api/threads/test" method="post" id="newThread">
         <input
           type="text"
           placeholder="board"
           id="board1"
           name="board"
-          required=""
+          required=""     
         /><br />
         <textarea
           type="text"
           placeholder="Thread text..."
           name="text"
           required=""
+          id= "text1"        
         ></textarea
         ><br />
         <input
@@ -51,10 +46,10 @@
           name="delete_password"
           required=""
         /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" class="submit" />
       </form>
       <hr />
-      <h4>Report thread (PUT /api/threads/:board)</h4>
+      <h3 style="padding-top: 10px;">Report thread (PUT /api/threads/:board)</h3>
       <form id="reportThread">
         <input
           type="text"
@@ -69,10 +64,10 @@
           name="thread_id"
           required=""
         /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" class="submit" />
       </form>
       <hr />
-      <h4>Delete thread (DELETE /api/threads/:board)</h4>
+      <h3 style="padding-top: 10px;">Delete thread (DELETE /api/threads/:board)</h3>
       <form id="deleteThread">
         <input
           type="text"
@@ -93,11 +88,11 @@
           name="delete_password"
           required=""
         /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" class="submit" />
       </form>
       <hr />
 
-      <h4>New reply (POST /api/replies/:board)</h4>
+      <h3 style="padding-top: 10px;">New reply (POST /api/replies/:board)</h3>
       <form action="/api/threads/test" method="post" id="newReply">
         <input
           type="text"
@@ -125,10 +120,10 @@
           name="delete_password"
           required=""
         /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" class="submit" />
       </form>
       <hr />
-      <h4>Report reply (PUT /api/replies/:board)</h4>
+      <h3 style="padding-top: 10px;">Report reply (PUT /api/replies/:board)</h3>
       <form id="reportReply">
         <input
           type="text"
@@ -149,10 +144,10 @@
           name="reply_id"
           required=""
         /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" class="submit" />
       </form>
       <hr />
-      <h4>Delete reply (DELETE /api/replies/:board)</h4>
+      <h3 style="padding-top: 10px;">Delete reply (DELETE /api/replies/:board)</h3>
       <form id="deleteReply">
         <input
           type="text"
@@ -179,8 +174,24 @@
           name="delete_password"
           required=""
         /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" class="submit" />
       </form>
+    </div>
+    <div  style="text-align: center">
+      <br /><br />
+      <h2>
+        <a href="/b/general/">Go to testing <i>'/b/general/'</i> board</a>
+      </h2>
+    </div>
+    
+    <div>
+      <br />
+      <h3>
+        User Guide :
+      </h3>
+      <p>
+        When you reach at the message board, just copy the url or thread ID and send it to the people want to join the chat.
+      </p>
     </div>
     <hr style="margin: 50px; margin-top: 200px" />
     <!-- Your web-app is https, so your scripts need to be too -->

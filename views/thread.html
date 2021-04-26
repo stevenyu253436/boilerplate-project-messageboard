@@ -55,12 +55,12 @@
             thread.push(
               '<form id="reportThread"><input type="hidden" name="report_id" value="' +
                 ele._id +
-                '"><input type="submit" value="Report"></form>'
+                '"><input type="submit" value="Report" class="btn"></form>'
             );
             thread.push(
               '<form id="deleteThread"><input type="hidden" value="' +
                 ele._id +
-                '" name="thread_id" required=""><input type="text" placeholder="password" name="delete_password" required=""><input type="submit" value="Delete"></form>'
+                '" name="thread_id" required=""><input type="text" placeholder="password" name="delete_password" required="" class="input"><input type="submit" value="Delete" class="btn"></form>'
             );
             thread.push("<h3>" + ele.text + "</h3>");
             thread.push('</div><div class="replies">');
@@ -74,16 +74,16 @@
                   ele._id +
                   '"><input type="hidden" name="reply_id" value="' +
                   rep._id +
-                  '"><input type="submit" value="Report"></form>'
+                  '"><input type="submit" value="Report" class="btn"></form>'
               );
               thread.push(
                 '<form id="deleteReply"><input type="hidden" value="' +
                   ele._id +
                   '" name="thread_id" required=""><input type="hidden" value="' +
                   rep._id +
-                  '" name="reply_id" required=""><input type="text" placeholder="password" name="delete_password" required=""><input type="submit" value="Delete"></form>'
+                  '" name="reply_id" required=""><input type="text" placeholder="password" name="delete_password" required="" class="input"><input type="submit" value="Delete" class="btn"></form>'
               );
-              thread.push("<p>" + rep.text + "</p>");
+              thread.push("<h3>" + rep.text + "</h3>");
               thread.push("</div>");
             });
             thread.push('<div class="newReply">');
@@ -99,7 +99,7 @@
               '<textarea rows="5" cols="80" type="text" placeholder="Quick reply..." name="text" required=""></textarea><br>'
             );
             thread.push(
-              '<input type="text" placeholder="password to delete" name="delete_password" required=""><input style="margin-left: 5px" type="submit" value="Submit">'
+              '<input type="text" placeholder="password to delete" name="delete_password" required="" class="input"><input style="margin-left: 5px" type="submit" value="Submit" class="btn">'
             );
             thread.push("</form></div></div></div>");
             boardThreads.push(thread.join(""));
