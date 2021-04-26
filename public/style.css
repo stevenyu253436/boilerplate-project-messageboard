@@ -6,7 +6,7 @@
 body {
   padding: 10px;
   position: relative; 
- text-align: center; 
+  text-align: center; 
 }
 
 body::before{
