@@ -5,7 +5,7 @@ exports.postReply = async (req, res, next) => {
   try {
     let board = req.params.board;
     let foundBoard = await Message.findById(req.body.thread_id);
-    foundBoard.bumpes_on = new Date().toUTCString();
+    foundBoard.bumped_on = new Date().toUTCString();
     let allReplies = [...foundBoard.replies];
     foundBoard.replies.push({
       text: req.body.text,
@@ -73,7 +73,7 @@ exports.putReply = async (req, res) => {
       if (ele._id == req.body.reply_id) {
         ele.reported = true;
         foundThread.save();
-        return res.send("success");
+        return res.send("reported");
       }
     });
   } catch (err) {
